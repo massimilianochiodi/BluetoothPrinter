@@ -16,18 +16,18 @@
 
 import UIKit
 
-public protocol Image {
-    var ticketImage: CGImage { get }
+public protocol Immagine {
+    var immaginescontrino: CGImage { get }
 }
 
-extension Image {
+extension Immagine {
     
-    var ticketData: Data? {
+    var scontrinodata: Data? {
         
-        let width = ticketImage.width
-        let height = ticketImage.height
+        let width = immaginescontrino.width
+        let height = immaginescontrino.height
         
-        if let grayData = convertImageToGray(ticketImage) {
+        if let grayData = convertImageToGray(immaginescontrino) {
             // get binary data
             if let binaryImageData = format_K_threshold(orgpixels: grayData, xsize: width, ysize: height) {
                 // each line prepare for printer
@@ -147,7 +147,7 @@ extension Image {
         var k: Int = 0
         
         for _ in 0..<nHeight {
-            data.append(ESC_POSCommand.beginPrintImage(xl: UInt8(nBytesPerLine % 0xff), xH: UInt8(nBytesPerLine / 0xff), yl: UInt8(1), yH: UInt8(0)).rawValue)
+            data.append(ESC_POS.beginPrintImage(xl: UInt8(nBytesPerLine % 0xff), xH: UInt8(nBytesPerLine / 0xff), yl: UInt8(1), yH: UInt8(0)).rawValue)
             
             var bytes = [UInt8]()
             for _ in 0..<nBytesPerLine {
@@ -207,8 +207,8 @@ private struct RGBA32: Equatable {
 }
 
 //
-extension UIImage: Image {
-    public var ticketImage: CGImage {
+extension UIImage: Immagine {
+    public var immaginescontrino: CGImage {
         guard let image = cgImage else {
             fatalError("can't get cgimage ref.")
         }
@@ -218,13 +218,13 @@ extension UIImage: Image {
 
 /// convert UIView to image
 /// can use webview print html.
-extension UIView: Image {
-    public var ticketImage: CGImage {
+extension UIView: Immagine {
+    public var immaginescontrino: CGImage {
         if #available(iOS 10.0, *) {
             let renderer = UIGraphicsImageRenderer(bounds: bounds)
             return renderer.image { rendererContext in
                 layer.render(in: rendererContext.cgContext)
-            }.ticketImage
+            }.immaginescontrino
         } else {
             UIGraphicsBeginImageContext(frame.size)
             defer {
@@ -234,7 +234,7 @@ extension UIView: Image {
             guard let image = UIGraphicsGetImageFromCurrentImageContext() else {
                 fatalError("UIGraphics Get Image Failed.")
             }
-            return image.ticketImage
+            return image.immaginescontrino
         }
     }
 }

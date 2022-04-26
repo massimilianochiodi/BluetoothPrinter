@@ -16,24 +16,24 @@
 
 import Foundation
 
-public struct Ticket {
+public struct Scontrino {
     
     public var feedLinesOnTail: UInt8 = 3
     public var feedLinesOnHead: UInt8 = 0
     
-    private var blocks = [Block]()
+    private var blocchi = [BloccoDati]()
     
-    public init(_ blocks: Block...) {
-        self.blocks = blocks
+    public init(_ blocchi: BloccoDati...) {
+        self.blocchi = blocchi
     }
     
-    public mutating func add(block: Block) {
-        blocks.append(block)
+    public mutating func add(blocco: BloccoDati) {
+        blocchi.append(blocco)
     }
     
     public func data(using encoding: String.Encoding) -> [Data] {
         
-        var ds = blocks.map { Data.reset + $0.data(using: encoding) }
+        var ds = blocchi.map { Data.reset + $0.data(using: encoding) }
         
         if feedLinesOnHead > 0 {
             ds.insert(Data(esc_pos: .printAndFeed(lines: feedLinesOnHead)), at: 0)

@@ -16,8 +16,9 @@
 
 import Foundation
 
-struct Blank: BlockDataProvider {
-    func data(using encoding: String.Encoding) -> Data {
-        return Data()
-    }
+public protocol ESCPOSCreaComando {
+    
+    func data(using encoding: String.Encoding) -> [Data]
 }
+
+extension Scontrino: ESCPOSCreaComando { }

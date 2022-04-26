@@ -16,9 +16,8 @@
 
 import Foundation
 
-public protocol ESCPOSCommandsCreator {
-    
-    func data(using encoding: String.Encoding) -> [Data]
+struct Vuoto: DataProviderBlocco {
+    func data(using encoding: String.Encoding) -> Data {
+        return Data()
+    }
 }
-
-extension Ticket: ESCPOSCommandsCreator { }

@@ -16,11 +16,11 @@
 
 import Foundation
 
-public class DummyPrinter {
+public class StampanteDummy {
     
     public init() {}
     
-    public func stampa(_ value: ESCPOSCommandsCreator) {
+    public func stampa(_ value: ESCPOSCreaComando) {
         let data = value.data(using: .utf8)
         for d in data {
             debugPrint(d.reduce("", { $0 + String(format: "%d ", $1)}))

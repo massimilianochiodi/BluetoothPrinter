@@ -97,7 +97,7 @@ public class BluetoothPrinterManager {
 
     public weak var delegate: PrinterManagerDelegate?
 
-    public var errorReport: ((PError) -> ())?
+    public var errorReport: ((ErroreStampante) -> ())?
 
     private var connectTimer: Timer?
 
@@ -179,7 +179,7 @@ public class BluetoothPrinterManager {
                 debugPrint(error.localizedDescription)
             }
 
-            self.errorReport?(.connectFailed)
+            self.errorReport?(.erroreConnessione)
         }
     }
 
@@ -189,20 +189,20 @@ public class BluetoothPrinterManager {
         }
     }
 
-    private func deliverError(_ error: PError) {
+    private func deliverError(_ error: ErroreStampante) {
         DispatchQueue.main.async { [weak self] in
             self?.errorReport?(error)
         }
     }
 
-    public func startScan() -> PError? {
+    public func startScan() -> ErroreStampante? {
         print("Inizio la scansione delle periferiche")
         guard !centralManager.isScanning else {
             return nil
         }
 
         guard centralManager.state == .poweredOn else {
-            return .deviceNotReady
+            return .dispositivoNonPronto
         }
 
         let serviceUUIDs = BluetoothPrinterManager.specifiedServices.map { CBUUID(string: $0) }
@@ -281,11 +281,11 @@ public class BluetoothPrinterManager {
         }
     }
 
-    public func stampa(_ content: ESCPOSCommandsCreator, encoding: String.Encoding = String.GBEncoding.GB_18030_2000, completeBlock: ((PError?) -> ())? = nil) {
+    public func stampa(_ content: ESCPOSCreaComando, encoding: String.Encoding = String.GBEncoding.GB_18030_2000, completeBlock: ((ErroreStampante?) -> ())? = nil) {
 
         guard let p = peripheralDelegate.writablePeripheral, let c = peripheralDelegate.writablecharacteristic else {
 
-            completeBlock?(.deviceNotReady)
+            completeBlock?(.dispositivoNonPronto)
             return
         }
 

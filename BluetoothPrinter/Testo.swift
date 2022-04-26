@@ -16,21 +16,21 @@
 
 import UIKit
 
-public struct Text: BlockDataProvider {
+public struct Testo: DataProviderBlocco {
     
     let content: String
-    let attributes: [Attribute]?
+    let attributi: [Attributi]?
     
-    public init(_ content: String, attributes: [Attribute]? = nil) {
+    public init(_ content: String, attributi: [Attributi]? = nil) {
         self.content = content
-        self.attributes = attributes
+        self.attributi = attributi
     }
     
     public func data(using encoding: String.Encoding) -> Data {
         var result = Data()
         
-        if let attrs = attributes {
-            result.append(Data(attrs.flatMap { $0.attribute }))
+        if let attrs = attributi {
+            result.append(Data(attrs.flatMap { $0.attributi }))
         }
         
         if let cd = content.data(using: encoding) {
@@ -41,9 +41,9 @@ public struct Text: BlockDataProvider {
     }
 }
 
-public extension Text {
+public extension Testo {
     
-    enum PredefinedAttribute: Attribute {
+    enum AttributiPredefiniti: Attributi {
         
         public enum ScaleLevel: UInt8 {
             
@@ -64,41 +64,41 @@ public extension Text {
         case scale(ScaleLevel)
         case feed(UInt8)
         
-        public var attribute: [UInt8] {
+        public var attributi: [UInt8] {
             switch self {
             case let .alignment(v):
-                return ESC_POSCommand.justification(v == .left ? 0 : v == .center ? 1 : 2).rawValue
+                return ESC_POS.justification(v == .left ? 0 : v == .center ? 1 : 2).rawValue
             case .bold:
-                return ESC_POSCommand.emphasize(mode: true).rawValue
+                return ESC_POS.emphasize(mode: true).rawValue
             case .small:
-                return ESC_POSCommand.font(1).rawValue
+                return ESC_POS.font(1).rawValue
             case .light:
-                return ESC_POSCommand.color(n: 1).rawValue
+                return ESC_POS.color(n: 1).rawValue
             case let .scale(v):
                 return [0x1D, 0x21, v.rawValue]
             case let .feed(v):
-                return ESC_POSCommand.feed(points: v).rawValue
+                return ESC_POS.feed(points: v).rawValue
             }
         }
     }
 }
 
-public extension Text {
+public extension Testo {
     
-    init(content: String, predefined attributes: PredefinedAttribute...) {
-        self.init(content, attributes: attributes)
+    init(content: String, predefined attributi: AttributiPredefiniti...) {
+        self.init(content, attributi: attributi)
     }
 }
 
-public extension Text {
+public extension Testo {
     
-    static func title(_ content: String) -> Text {
-        return Text(content: content, predefined: .scale(.l1), .alignment(.center))
+    static func title(_ content: String) -> Testo {
+        return Testo(content: content, predefined: .scale(.l1), .alignment(.center))
     }
     
     
     
-    static func kv(printDensity: Int = 354, fontDensity: Int = 12, k: String, v: String, attributes: [Attribute]? = nil) -> Text {
+    static func kv(printDensity: Int = 354, fontDensity: Int = 12, k: String, v: String, attributi: [Attributi]? = nil) -> Testo {
         
         var num = printDensity / fontDensity
         
@@ -117,6 +117,6 @@ public extension Text {
         contents.insert(k, at: 0)
         contents.append(v)
         
-        return Text(contents.joined(), attributes: attributes)
+        return Testo(contents.joined(), attributi: attributi)
     }
 }

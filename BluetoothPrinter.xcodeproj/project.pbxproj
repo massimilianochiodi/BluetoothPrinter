@@ -7,42 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EAF7772F2811425A001CC898 /* Printable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7771D28114259001CC898 /* Printable.swift */; };
+		EAF7772F2811425A001CC898 /* Stampabile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7771D28114259001CC898 /* Stampabile.swift */; };
 		EAF777302811425A001CC898 /* PrinterError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7771E28114259001CC898 /* PrinterError.swift */; };
-		EAF777312811425A001CC898 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7771F28114259001CC898 /* Ticket.swift */; };
+		EAF777312811425A001CC898 /* Scontrino.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7771F28114259001CC898 /* Scontrino.swift */; };
 		EAF777322811425A001CC898 /* BluetoothPrinterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7772028114259001CC898 /* BluetoothPrinterManager.swift */; };
 		EAF777332811425A001CC898 /* BluetoothCentralManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7772128114259001CC898 /* BluetoothCentralManagerDelegate.swift */; };
-		EAF777342811425A001CC898 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7772228114259001CC898 /* Block.swift */; };
+		EAF777342811425A001CC898 /* BloccoDati.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7772228114259001CC898 /* BloccoDati.swift */; };
 		EAF777352811425A001CC898 /* BluetoothPeripheralDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7772328114259001CC898 /* BluetoothPeripheralDelegate.swift */; };
 		EAF777362811425A001CC898 /* BluetoothPrinterSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7772428114259001CC898 /* BluetoothPrinterSelectTableViewController.swift */; };
-		EAF777372811425A001CC898 /* ESC_POSCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7772528114259001CC898 /* ESC_POSCommand.swift */; };
-		EAF777392811425A001CC898 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7772728114259001CC898 /* Image.swift */; };
-		EAF7773A2811425A001CC898 /* Dividing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7772828114259001CC898 /* Dividing.swift */; };
-		EAF7773B2811425A001CC898 /* Blank.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7772928114259001CC898 /* Blank.swift */; };
-		EAF7773C2811425A001CC898 /* DummyPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7772A2811425A001CC898 /* DummyPrinter.swift */; };
+		EAF777372811425A001CC898 /* ESC_POS.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7772528114259001CC898 /* ESC_POS.swift */; };
+		EAF777392811425A001CC898 /* Immagine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7772728114259001CC898 /* Immagine.swift */; };
+		EAF7773A2811425A001CC898 /* Divisore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7772828114259001CC898 /* Divisore.swift */; };
+		EAF7773B2811425A001CC898 /* Vuoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7772928114259001CC898 /* Vuoto.swift */; };
+		EAF7773C2811425A001CC898 /* StampanteDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7772A2811425A001CC898 /* StampanteDummy.swift */; };
 		EAF7773D2811425A001CC898 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7772B2811425A001CC898 /* QRCode.swift */; };
-		EAF7773E2811425A001CC898 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7772C2811425A001CC898 /* Text.swift */; };
-		EAF7773F2811425A001CC898 /* TicketImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7772D2811425A001CC898 /* TicketImage.swift */; };
+		EAF7773E2811425A001CC898 /* Testo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7772C2811425A001CC898 /* Testo.swift */; };
+		EAF7773F2811425A001CC898 /* ScontrinoImmagine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF7772D2811425A001CC898 /* ScontrinoImmagine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EAF7771128114222001CC898 /* BluetoothPrinter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BluetoothPrinter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EAF7771D28114259001CC898 /* Printable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Printable.swift; sourceTree = "<group>"; };
+		EAF7771D28114259001CC898 /* Stampabile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stampabile.swift; sourceTree = "<group>"; };
 		EAF7771E28114259001CC898 /* PrinterError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrinterError.swift; sourceTree = "<group>"; };
-		EAF7771F28114259001CC898 /* Ticket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		EAF7771F28114259001CC898 /* Scontrino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scontrino.swift; sourceTree = "<group>"; };
 		EAF7772028114259001CC898 /* BluetoothPrinterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothPrinterManager.swift; sourceTree = "<group>"; };
 		EAF7772128114259001CC898 /* BluetoothCentralManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothCentralManagerDelegate.swift; sourceTree = "<group>"; };
-		EAF7772228114259001CC898 /* Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
+		EAF7772228114259001CC898 /* BloccoDati.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloccoDati.swift; sourceTree = "<group>"; };
 		EAF7772328114259001CC898 /* BluetoothPeripheralDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothPeripheralDelegate.swift; sourceTree = "<group>"; };
 		EAF7772428114259001CC898 /* BluetoothPrinterSelectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothPrinterSelectTableViewController.swift; sourceTree = "<group>"; };
-		EAF7772528114259001CC898 /* ESC_POSCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESC_POSCommand.swift; sourceTree = "<group>"; };
-		EAF7772728114259001CC898 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		EAF7772828114259001CC898 /* Dividing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dividing.swift; sourceTree = "<group>"; };
-		EAF7772928114259001CC898 /* Blank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blank.swift; sourceTree = "<group>"; };
-		EAF7772A2811425A001CC898 /* DummyPrinter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyPrinter.swift; sourceTree = "<group>"; };
+		EAF7772528114259001CC898 /* ESC_POS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESC_POS.swift; sourceTree = "<group>"; };
+		EAF7772728114259001CC898 /* Immagine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Immagine.swift; sourceTree = "<group>"; };
+		EAF7772828114259001CC898 /* Divisore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Divisore.swift; sourceTree = "<group>"; };
+		EAF7772928114259001CC898 /* Vuoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vuoto.swift; sourceTree = "<group>"; };
+		EAF7772A2811425A001CC898 /* StampanteDummy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StampanteDummy.swift; sourceTree = "<group>"; };
 		EAF7772B2811425A001CC898 /* QRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
-		EAF7772C2811425A001CC898 /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
-		EAF7772D2811425A001CC898 /* TicketImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketImage.swift; sourceTree = "<group>"; };
+		EAF7772C2811425A001CC898 /* Testo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Testo.swift; sourceTree = "<group>"; };
+		EAF7772D2811425A001CC898 /* ScontrinoImmagine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScontrinoImmagine.swift; sourceTree = "<group>"; };
 		EAF7772E2811425A001CC898 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAF7775928114432001CC898 /* BluetoothPrinter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluetoothPrinter.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,22 +78,22 @@
 			isa = PBXGroup;
 			children = (
 				EAF7772E2811425A001CC898 /* Info.plist */,
-				EAF7772928114259001CC898 /* Blank.swift */,
-				EAF7772228114259001CC898 /* Block.swift */,
+				EAF7772928114259001CC898 /* Vuoto.swift */,
+				EAF7772228114259001CC898 /* BloccoDati.swift */,
 				EAF7772128114259001CC898 /* BluetoothCentralManagerDelegate.swift */,
 				EAF7772328114259001CC898 /* BluetoothPeripheralDelegate.swift */,
 				EAF7772028114259001CC898 /* BluetoothPrinterManager.swift */,
 				EAF7772428114259001CC898 /* BluetoothPrinterSelectTableViewController.swift */,
-				EAF7772828114259001CC898 /* Dividing.swift */,
-				EAF7772A2811425A001CC898 /* DummyPrinter.swift */,
-				EAF7772528114259001CC898 /* ESC_POSCommand.swift */,
-				EAF7772728114259001CC898 /* Image.swift */,
-				EAF7771D28114259001CC898 /* Printable.swift */,
+				EAF7772828114259001CC898 /* Divisore.swift */,
+				EAF7772A2811425A001CC898 /* StampanteDummy.swift */,
+				EAF7772528114259001CC898 /* ESC_POS.swift */,
+				EAF7772728114259001CC898 /* Immagine.swift */,
+				EAF7771D28114259001CC898 /* Stampabile.swift */,
 				EAF7771E28114259001CC898 /* PrinterError.swift */,
 				EAF7772B2811425A001CC898 /* QRCode.swift */,
-				EAF7772C2811425A001CC898 /* Text.swift */,
-				EAF7771F28114259001CC898 /* Ticket.swift */,
-				EAF7772D2811425A001CC898 /* TicketImage.swift */,
+				EAF7772C2811425A001CC898 /* Testo.swift */,
+				EAF7771F28114259001CC898 /* Scontrino.swift */,
+				EAF7772D2811425A001CC898 /* ScontrinoImmagine.swift */,
 				EAF7775928114432001CC898 /* BluetoothPrinter.h */,
 			);
 			path = BluetoothPrinter;
@@ -178,22 +178,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAF777372811425A001CC898 /* ESC_POSCommand.swift in Sources */,
-				EAF7773E2811425A001CC898 /* Text.swift in Sources */,
-				EAF7772F2811425A001CC898 /* Printable.swift in Sources */,
-				EAF7773F2811425A001CC898 /* TicketImage.swift in Sources */,
-				EAF7773C2811425A001CC898 /* DummyPrinter.swift in Sources */,
+				EAF777372811425A001CC898 /* ESC_POS.swift in Sources */,
+				EAF7773E2811425A001CC898 /* Testo.swift in Sources */,
+				EAF7772F2811425A001CC898 /* Stampabile.swift in Sources */,
+				EAF7773F2811425A001CC898 /* ScontrinoImmagine.swift in Sources */,
+				EAF7773C2811425A001CC898 /* StampanteDummy.swift in Sources */,
 				EAF777322811425A001CC898 /* BluetoothPrinterManager.swift in Sources */,
-				EAF777312811425A001CC898 /* Ticket.swift in Sources */,
+				EAF777312811425A001CC898 /* Scontrino.swift in Sources */,
 				EAF777362811425A001CC898 /* BluetoothPrinterSelectTableViewController.swift in Sources */,
-				EAF777342811425A001CC898 /* Block.swift in Sources */,
+				EAF777342811425A001CC898 /* BloccoDati.swift in Sources */,
 				EAF7773D2811425A001CC898 /* QRCode.swift in Sources */,
-				EAF7773B2811425A001CC898 /* Blank.swift in Sources */,
+				EAF7773B2811425A001CC898 /* Vuoto.swift in Sources */,
 				EAF777302811425A001CC898 /* PrinterError.swift in Sources */,
-				EAF7773A2811425A001CC898 /* Dividing.swift in Sources */,
+				EAF7773A2811425A001CC898 /* Divisore.swift in Sources */,
 				EAF777332811425A001CC898 /* BluetoothCentralManagerDelegate.swift in Sources */,
 				EAF777352811425A001CC898 /* BluetoothPeripheralDelegate.swift in Sources */,
-				EAF777392811425A001CC898 /* Image.swift in Sources */,
+				EAF777392811425A001CC898 /* Immagine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

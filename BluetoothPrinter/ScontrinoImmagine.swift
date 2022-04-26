@@ -17,24 +17,24 @@
 import Foundation
 import UIKit
 
-public struct TicketImage: BlockDataProvider {
+public struct ScontrinoImmagine: DataProviderBlocco {
     
-    private let image: Image
-    private let attributes: [Attribute]?
+    private let immagine: Immagine
+    private let attributi: [Attributi]?
     
-    public init(_ image: Image, attributes: [Attribute]? = nil) {
-        self.image = image
-        self.attributes = attributes
+    public init(_ immagine: Immagine, attributi: [Attributi]? = nil) {
+        self.immagine = immagine
+        self.attributi = attributi
     }
     
     public func data(using encoding: String.Encoding) -> Data {
         var result = Data()
        
-        if let attrs = attributes {
-            result.append(Data(attrs.flatMap { $0.attribute }))
+        if let attrs = attributi {
+            result.append(Data(attrs.flatMap { $0.attributi }))
         }
         
-        if let data = image.ticketData {
+        if let data = immagine.scontrinodata {
             result.append(data)
         }
         
@@ -42,16 +42,16 @@ public struct TicketImage: BlockDataProvider {
     }
 }
 
-public extension TicketImage {
+public extension ScontrinoImmagine {
     
-    enum PredefinedAttribute: Attribute {
+    enum AttributiPredefiniti: Attributi {
         
         case alignment(NSTextAlignment)
         
-        public var attribute: [UInt8] {
+        public var attributi: [UInt8] {
             switch self {
             case let .alignment(v):
-                return ESC_POSCommand.justification(v == .left ? 0 : v == .center ? 1 : 2).rawValue
+                return ESC_POS.justification(v == .left ? 0 : v == .center ? 1 : 2).rawValue
             }
         }
     }

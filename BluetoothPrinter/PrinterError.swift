@@ -16,8 +16,8 @@
 
 import Foundation
 
-public enum PError: Error {
+public enum ErroreStampante: Error {
 
-    case deviceNotReady
-    case connectFailed
+    case dispositivoNonPronto
+    case erroreConnessione
 }

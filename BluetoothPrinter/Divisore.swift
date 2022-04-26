@@ -27,15 +27,15 @@ extension Character: DividingPrivoider {
 }
 
 /// add Dividing on receipt
-public struct Dividing: BlockDataProvider {
+public struct Divisore: DataProviderBlocco {
     
     let provider: DividingPrivoider
     
     let printDensity: Int
     let fontDensity: Int
     
-    static var `default`: Dividing {
-        return Dividing(provider: Character("-"), printDensity: 384, fontDensity: 12)
+    static var `default`: Divisore {
+        return Divisore(provider: Character("-"), printDensity: 384, fontDensity: 12)
     }
     
     public func data(using encoding: String.Encoding) -> Data {
@@ -43,6 +43,6 @@ public struct Dividing: BlockDataProvider {
         
         let content = stride(from: 0, to: num, by: 1).map { String(provider.character(for: $0, total: num) ) }.joined()
         
-        return Text(content).data(using: encoding)
+        return Testo(content).data(using: encoding)
     }
 }
