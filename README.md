@@ -25,7 +25,7 @@ https://github.com/massimilianochiodi/BluetoothPrinter
 ```swift
 import BluetoothPrinter
 
-  Esempio per la stampa di uno scontrino semplice :
+  /// Esempio per la stampa di uno scontrino semplice :
 
     var scontrino = Scontrino(
 	    .image(image, attributes: .alignment(.center)),
